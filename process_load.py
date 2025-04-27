@@ -5,7 +5,7 @@ from pandas.tseries.holiday import USFederalHolidayCalendar
 cal = pd.tseries.holiday.USFederalHolidayCalendar()
 holidays = cal.holidays()
 
-base_dir = "/dmx/v-drive/Demex/Users/john.caramichael/scratch/school/dsci441/load"
+base_dir = "data/nyiso"
 file_names = os.listdir(base_dir)
 file_names = [x for x in file_names if (".csv" in x)]
 
