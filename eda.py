@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.dates as mdates
 import matplotlib.ticker as mticker
 
-base_dir = "/dmx/v-drive/Demex/Users/john.caramichael/scratch/school/dsci441/load"
+base_dir = "data/load"
 df = pd.read_feather(base_dir + "/load.feather")
 
 """ =========================================================
@@ -66,7 +66,7 @@ plt.show()
 """ =======================================================
 PEAK VS. WX
 ======================================================= """
-base_dir = "/dmx/v-drive/Demex/Users/john.caramichael/scratch/school/dsci441/gddp"
+base_dir = "data/wx"
 
 wx =  pd.read_feather(base_dir + "/gddp.feather")
 df_peak = pd.merge(df_peak, wx, on='date', how='left')
