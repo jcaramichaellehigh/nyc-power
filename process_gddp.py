@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 
-base_dir = "/dmx/v-drive/Demex/Users/john.caramichael/scratch/school/dsci441/gddp"
+base_dir = "data/wx"
 
 file = os.path.join(base_dir, 'GDDP_CMIP6_CNRM-ESM2-1.csv')
 df = pd.read_csv(file)
