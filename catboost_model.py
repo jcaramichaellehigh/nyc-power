@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score, mean_absolute_error, root_mean_squared_error
 
 
-base_dir = "/dmx/v-drive/Demex/Users/john.caramichael/scratch/school/dsci441/training"
+base_dir = "data/training"
 df = pd.read_feather(os.path.join(base_dir, "df_train.feather"))
 
 """ ====================================================================================================================
