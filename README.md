@@ -17,7 +17,7 @@ This projects uses two sources of data:
 ## Instructions
 
 - Download the NYISO data in one-year chunks via the website
-- Download the NEX-GDDP-CMIP6 weather data from [GEE web API](https://www.code.earthengine.google.com), using the `google_earth_engine.js` script
+- Download the NEX-GDDP-CMIP6 weather data from [GEE web API](https://code.earthengine.google.com), using the `google_earth_engine.js` script
 - Modify any filepaths necessary to point the `.py` files to the downloaded data
 - Run the `process_gddp.py` script
 - Run the `process_load.py` script
