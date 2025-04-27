@@ -7,7 +7,7 @@ from pandas.tseries.holiday import USFederalHolidayCalendar
     PEAK LOAD
 ============================================================================ """
 
-load_dir = "/dmx/v-drive/Demex/Users/john.caramichael/scratch/school/dsci441/load"
+load_dir = "data/load"
 df = pd.read_feather(load_dir + "/load.feather")
 
 df_peak = df.groupby('date')['load'].max().reset_index()
@@ -19,7 +19,7 @@ df_peak['log10_load'] = np.log10(df_peak['load'])
     WX DATA
 ============================================================================ """
 
-wx_dir = "/dmx/v-drive/Demex/Users/john.caramichael/scratch/school/dsci441/gddp"
+wx_dir = "data/wx"
 wx =  pd.read_feather(wx_dir + "/gddp.feather")
 df_peak = pd.merge(df_peak, wx, on='date', how='outer')
 #%%
@@ -46,7 +46,7 @@ for var in ['dow', 'hurs', 'pr', 'rlds', 'rsds', 'sfcWind', 'tas', 'tasmax', 'ta
 
 df_peak['covid'] = df_peak['date'].between("2020-03-16", "2021-06-15")
 
-train_dir = "/dmx/v-drive/Demex/Users/john.caramichael/scratch/school/dsci441/training"
+train_dir = "data/training"
 df_peak.to_feather(os.path.join(train_dir, "df_train.feather"))
 
 
